@@ -1,0 +1,27 @@
+{
+  "name": "tube-shot",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "scripts": {
+    "dev": "bun run concurrently \"npm:copy\" \"npm:build:dev:*\"",
+    "build:dev:js": "bun build --entrypoints ./src/content/index.ts ./src/background/index.ts ./src/options/index.tsx --root ./src --outdir ./out --entry-naming '[dir].[ext]' --watch",
+    "build:dev:css": "tailwindcss -i ./src/index.css -o ./out/index.css --watch",
+    "copy": "bun --watch scripts/copy.ts",
+    "check": "biome check --write"
+  },
+  "dependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.4",
+    "@types/bun": "latest",
+    "@types/chrome": "^0.0.287",
+    "@types/react": "^19.0.2",
+    "@types/react-dom": "^19.0.2",
+    "concurrently": "^9.1.2",
+    "tailwindcss": "^3.4.17"
+  }
+}
