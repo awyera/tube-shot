@@ -8,6 +8,7 @@
     "dev": "bun run concurrently \"npm:copy\" \"npm:build:dev:*\"",
     "build:dev:js": "bun build --entrypoints ./src/content/index.ts ./src/background/index.ts ./src/options/index.tsx --root ./src --outdir ./out --entry-naming '[dir].[ext]' --watch",
     "build:dev:css": "tailwindcss -i ./src/index.css -o ./out/index.css --watch",
+    "build:prod": "bun scripts/build.ts",
     "copy": "bun --watch scripts/copy.ts",
     "check": "biome check --write"
   },
