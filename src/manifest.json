@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "TubeShot",
+  "name": "YouTube screenshot",
   "version": "0.0.1",
   "description": "YouTube screenshot.",
   "permissions": [

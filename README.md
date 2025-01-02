@@ -1,4 +1,4 @@
-# tube-shot
+# yt-screenshot
 
 To install dependencies:
 
